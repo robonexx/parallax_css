@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background: linear-gradient(
+    to bottom,
+    #fe4365,
+    #fc9d9a,
+    #f9cdad,
+    #cbc8a9,
+    #83af98
+  );
+  text-align: center;
+}
+.intro {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 0 3rem;
+  position: relative;
+  transform-style: inherit;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-top: 100px;
+  color: #83af98;
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.7));
+}
+.intro > p {
+  color: #f4f4f8;
+}
+.intro,
+.intro:before {
+  background: 50% 50% / cover;
+}
+
+.intro:before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(./thumbs_up.jpg);
+  background-color: #f9cdad;
+  background-blend-mode: multiply;
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  height: 100vh;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.7));
+}
+
+.wrapper,
+.box {
+  margin: 400px auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: #333;
+  padding: 100px 0;
+}
+.box {
+  display: flex;
+  max-width: 800px;
+  box-sizing: border-box;
+  min-height: 80vh;
+  padding: 5rem, 3rem;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+  background: #83af98;
+  filter: drop-shadow(3px 3px 10px rgba(0, 0, 0, 0.7));
+}
+
+.wrapper:before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  display: block;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+.wrapper,
+.wrapper:before {
+  background: 50% 50% / cover;
+}
+
+p {
+  font-size: 26px;
+}
